@@ -1,15 +1,16 @@
+package com.dsimerova.figuresfx.geometry;
+
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-abstract class Figures {
+public abstract class Figure {
     protected Color color;
     protected double lineWidth;
     private int type;
-    abstract void draw(GraphicsContext gc);
     Point center;
 
 
-    public Figures(Color color, double lineWidth, int type, Point center) {
+    public Figure(Color color, double lineWidth, int type, Point center) {
         this.color = color;
         this.lineWidth = lineWidth;
         this.type = type;
@@ -44,6 +45,8 @@ abstract class Figures {
     public void setCenter(Point center) {
         this.center = center;
     }
+
+    public abstract void draw(GraphicsContext gc);
 
     public static final int FIGURE_TYPE_RECTANGLE = 0;
     public static final int FIGURE_TYPE_CIRCLE = 1;

@@ -1,12 +1,14 @@
+package com.dsimerova.figuresfx.geometry;
+
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-class Rectangle extends Figures {
+public class Rectangle extends Figure {
     private Rectangle(Color color, double lineWidth, Point center) {
         super(color, lineWidth, FIGURE_TYPE_RECTANGLE, center);
     }
 
-    public Rectangle(Color color, double lineWidth, Point center, double a, double b) {
+    public Rectangle(double lineWidth, Color color, Point center, double a, double b) {
         this(color, lineWidth, center);
         this.a = a;
         this.b = b;
@@ -32,7 +34,10 @@ class Rectangle extends Figures {
     }
 
     @Override
-    void draw(GraphicsContext gc) {
+    public void draw(GraphicsContext gc) {
+        gc.setLineWidth(lineWidth);
+        gc.setStroke(color);
+        gc.strokeRect(center.x-a/2, center.y - b/2, a, b);
 
     }
 
