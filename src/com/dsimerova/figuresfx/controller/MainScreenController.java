@@ -31,7 +31,7 @@ public class MainScreenController implements Initializable {
 
             case Figure.FIGURE_TYPE_RECTANGLE:
                 figure = new Rectangle(rmd.nextInt(5),
-                        Color.CORNFLOWERBLUE,
+                        Color.FUCHSIA,
                         point,
                         rmd.nextInt(100),
                         rmd.nextInt(100));
@@ -45,7 +45,7 @@ public class MainScreenController implements Initializable {
                 break;
 
             case Figure.FIGURE_TYPE_CIRCLE:
-                figure = new Circle(rmd.nextInt(5), Color.RED, point, rmd.nextInt(100));
+                figure = new Circle(rmd.nextInt(5), Color.GREENYELLOW, point, rmd.nextInt(100));
                 break;
 
             default:
