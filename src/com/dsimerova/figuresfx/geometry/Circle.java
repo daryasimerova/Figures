@@ -15,6 +15,7 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+
     /*@Override
     public void printFigure() {
         System.out.println("  * ^ * ");

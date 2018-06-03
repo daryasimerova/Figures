@@ -30,22 +30,24 @@ public class MainScreenController implements Initializable {
         switch (rmd.nextInt(3)) {
 
             case Figure.FIGURE_TYPE_RECTANGLE:
+                int a = rmd.nextInt(51);
                 figure = new Rectangle(rmd.nextInt(5),
                         Color.FUCHSIA,
                         point,
-                        rmd.nextInt(100),
-                        rmd.nextInt(100));
+                        a<10?10:a, a<10?10:a);
                 break;
 
             case Figure.FIGURE_TYPE_TRIANGLE:
+                int i = rmd.nextInt(51);
                 figure = new Triangle(rmd.nextInt(5),
                         Color.DARKCYAN,
                         point,
-                        rmd.nextInt(100));
+                        i<10?10:i);
                 break;
 
             case Figure.FIGURE_TYPE_CIRCLE:
-                figure = new Circle(rmd.nextInt(5), Color.GREENYELLOW, point, rmd.nextInt(100));
+                int r = rmd.nextInt(51);
+                figure = new Circle(rmd.nextInt(5), Color.GREENYELLOW, point, r<10?10:r);
                 break;
 
             default:
